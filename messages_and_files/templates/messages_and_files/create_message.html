@@ -1,0 +1,16 @@
+{% extends 'messages_and_files/base.html' %}
+
+{% block title %}
+    Создание сообщения
+{% endblock %}
+
+
+{% block content %}
+
+    <form action="{% url 'add_message' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Создать сообщение</button>
+    </form>
+
+{% endblock %}
