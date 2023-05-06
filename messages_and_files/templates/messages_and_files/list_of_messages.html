@@ -4,6 +4,7 @@
     {% for message in messages %}
         <div class="card quest-card" style="margin-bottom: 30px; max-width: 1024px; margin-right: auto; margin-left: auto">
             <div class="card-header">
+                <b>Дата и время: </b> {{ message.send_date }} <br>
                 <b>Отправитель: </b>{{ message.sender }} <br>
                 <b>Получатель: </b>{{ message.recipient }}
                 {% if message.msg_file %}
